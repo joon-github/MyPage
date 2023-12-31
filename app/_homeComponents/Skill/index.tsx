@@ -3,6 +3,7 @@ import React from 'react';
 import SkillImage from './SkillImage';
 import SkillWrapper from './SkillWrapper';
 
+
 const Skill = () => {
   return (
     <div id='Skill' className='flex gap-8 flex-col w-full px-4'>
