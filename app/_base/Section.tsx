@@ -36,8 +36,13 @@ type SectionProps = {
 
 const Section = ({title,children,width}:SectionProps) => {
   return (
-    <section className={`${width}`}>
-      <h2 className='font-bold text-3xl mb-6 pl-4'>{title}</h2>
+    <section className={`${width}`} >
+      <div className='flex flex-col justify-center'>
+        <div className='min-w-max w-6/12'>
+          <h2 className='font-bold text-3xl mb-2'>{title}</h2>
+          <div style={{borderBottom:"1px solid black",width:"100%"}}></div>
+        </div>
+      </div>
       {children}
     </section>
   );

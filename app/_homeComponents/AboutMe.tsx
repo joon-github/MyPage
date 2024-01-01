@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const AboutMe = () => {
   return (
-    <div className='p-14'>
+    <div className='p-8'>
       <Image
-        className='w-full'
+        className='w-72'
         src={`/image/profile.png`}
         height={400}
         width={200}

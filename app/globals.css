@@ -25,17 +25,19 @@ p.whiteText{
 h1,
 h2{
   color: var(--MainThemeColor);
+  margin: 0;
 }
 
 h3{
   font-size: 20px;
   color: var(--MainTextColor);
+  margin: 0;
 }
 
 header{
   background-color: var(--MainThemeColor);
   min-height: 54px;
-  margin-bottom: 15px;
+  width: 100%;
 }
 
 body {
@@ -45,4 +47,12 @@ body {
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  width: 100vw;
+  min-width: 900px;
+  overflow-x: auto;
+}
+
+main{
+  height: calc(100vh - 56px);
+  padding-top: 15px;
 }

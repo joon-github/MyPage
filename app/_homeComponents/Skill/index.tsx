@@ -4,7 +4,7 @@ import SkillImage from './SkillImage';
 import SkillWrapper from './SkillWrapper';
 const Skill = () => {
   return (
-    <div id='Skill' className='flex gap-8 flex-col w-full px-4'>
+    <div id='Skill' className='flex gap-8 flex-col w-full p-8'>
       <SkillWrapper label="언어">
         <SkillImage 
           fileName='JavaScript ES6.png'
