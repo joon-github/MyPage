@@ -7,7 +7,13 @@ type SkillWrapperProps = {
 
 const SkillWrapper = ({ label, children }: SkillWrapperProps) => {
   return (
-    <div className='flex gap-4'>
+    <div 
+      className='flex gap-4'
+      data-aos="fade-up"
+      data-aos-easing="ease-out"
+      data-aos-duration="500"
+      data-aos-once="true"
+    >
       <div className='flex items-center w-28'>
         <h3 className='font-bold'>{label}</h3>
       </div>

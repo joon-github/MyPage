@@ -36,8 +36,8 @@ type SectionProps = {
 
 const Section = ({title,children,width}:SectionProps) => {
   return (
-    <section className={`h-screen ${width}`}>
-      <h2 className='font-bold text-3xl mb-6'>{title}</h2>
+    <section className={`${width}`}>
+      <h2 className='font-bold text-3xl mb-6 pl-4'>{title}</h2>
       {children}
     </section>
   );
