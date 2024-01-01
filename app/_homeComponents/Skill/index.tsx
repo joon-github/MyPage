@@ -2,87 +2,76 @@
 import React from 'react';
 import SkillImage from './SkillImage';
 import SkillWrapper from './SkillWrapper';
+import Section, { Width } from '@/app/_base/Section';
 const Skill = () => {
+  const skills = [
+    {
+      label: "언어",
+      items: [
+        { fileName: 'JavaScript ES6.png', label: "JavaScript" },
+        { fileName: 'TypeScript.png', label: 'TypeScript' },
+      ]
+    },
+    {
+      label: "프레임워크",
+      items: [
+        { fileName: 'React.png', label: "React" },
+        { fileName: 'NextJs.svg', label: "Next.js" },
+      ]
+    },
+    {
+      label: "스타일링",
+      items: [
+        { fileName: 'CSS3.png', label: "CSS3" },
+        { fileName: 'StyledComponent.png', label: "Styled Component" },
+        { fileName: 'Tailwind.png', label: "Tailwind" },
+      ]
+    },
+    {
+      label: "UI 라이브러리",
+      items: [
+        { fileName: 'AntDesign.png', label: "AntDesign" },
+        { fileName: 'Bootstrap.png', label: "Bootstrap" },
+      ]
+    },
+    {
+      label: "상태관리",
+      items: [
+        { fileName: 'Recoil.png', label: "Recoil" },
+        { fileName: 'Redux.png', label: "Redux" },
+        { fileName: 'React-Queary.png', label: "React-Queary" },
+      ]
+    },
+    {
+      label: "버전관리",
+      items: [
+        { fileName: 'GitHub.png', label: "GitHub" },
+        { fileName: 'gitAction.png', label: "Git Action" },
+      ]
+    },
+  ];
   return (
-    <div id='Skill' className='flex w-full px-2 py-2'>
-      {/* <div className='flex flex-col gap-24'>
-        <div className='test2'>LANGUAGE</div>
-        <div className='test2'>FRAMEWOKR</div>
-        <div className='test2'>STYLE</div>
-        <div className='test2'>STATUS</div>
-        <div className='test2'>VERSION</div>
-      </div> */}
-      <div className='flex flex-col justify-between gap-4'>
-        <SkillWrapper label="언어">
-          <SkillImage 
-            fileName='JavaScript ES6.png'
-            label="JavaScript"
-          />
-          <SkillImage 
-            fileName='TypeScript.png'
-            label='TypeScript'
-          />
-        </SkillWrapper>
-        <SkillWrapper label="프레임워크">
-          <SkillImage 
-            fileName='React.png'
-            label="React"
-          />
-          <SkillImage
-            fileName='NextJs.svg'
-            label="Next.js"
-            />
-        </SkillWrapper>
-        <SkillWrapper label="스타일링">
-          <SkillImage 
-            fileName='CSS3.png'
-            label="CSS3"
-          />
-          <SkillImage 
-            fileName='StyledComponent.png'
-            label="Styled Component"
-          />
-          <SkillImage 
-            fileName='Tailwind.png'
-            label="Tailwind"
-          />
-        </SkillWrapper>
-        <SkillWrapper label="UI 라이브러리">
-          <SkillImage 
-            fileName='AntDesign.png'
-            label="AntDesign"
-          />
-          <SkillImage 
-            fileName='Bootstrap.png'
-            label="Bootstrap"
-          />
-        </SkillWrapper>
-        <SkillWrapper label="상태관리">
-          <SkillImage 
-            fileName='Recoil.png'
-            label="Recoil"
-          />
-          <SkillImage 
-            fileName='Redux.png'
-            label="Redux"
-          />
-          <SkillImage 
-            fileName='React-Queary.png'
-            label="React-Queary"
-          />
-        </SkillWrapper>
-        <SkillWrapper label="버전관리">
-          <SkillImage 
-            fileName='GitHub.png'
-            label="GitHub"
-          />
-          <SkillImage 
-            fileName='gitAction.png'
-            label="Git Action"
-          />
-        </SkillWrapper>
+    <>
+    <Section title='SKILLS' width={Width.full}>
+      <div id='Skill' className='flex w-full px-2 py-2'>
+        <div className='flex flex-col justify-between gap-4'>
+          {skills.map(({label,items}) => {
+            return (
+            <SkillWrapper label={label}>
+              {items.map(({fileName,label}) =>{
+                return(
+                  <SkillImage 
+                    fileName={fileName}
+                    label={label}
+                  />
+                )
+              })}
+            </SkillWrapper>)
+          })}
+        </div>
       </div>
-    </div>
+    </Section>
+    </>
   );
 };
 

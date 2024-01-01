@@ -38,6 +38,7 @@ const Section = ({title,children,width}:SectionProps) => {
   return (
     <section className={`${width} h-full`} >
       <div className='flex flex-col justify-center'>
+      {title && <div className='line'/>}
         <div className='min-w-max w-6/12'>
           {title && <h2 className='font-bold text-2xl mb-2'>{title}</h2>}
         </div>
