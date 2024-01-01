@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/app/_base/Header'
 import StyledJsxRegistry from './registry'
+import { AOSInit } from './aos'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <AOSInit />
       <body className={inter.className}>
         <Header/>
         <StyledJsxRegistry>{children}</StyledJsxRegistry> 
