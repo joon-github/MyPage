@@ -105,6 +105,11 @@ main{
   min-width: 400px;
 }
 
+#test::after{
+  content: '┐';
+  display: flex;
+}
+
 @media (max-width:1000px) {
   body{
     min-width: 100%;

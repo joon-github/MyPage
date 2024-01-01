@@ -7,8 +7,8 @@ const AboutMe = () => {
     <div id='AboutMe' className='border-r border-gray-300 w-4/12'>
       <Section width={Width.full}>
         <article className='flex flex-col h-full'>
-          <div>
-            <p className='text-2xl text-center'>편범준</p>
+          <div className='bg-gray-800'>
+            <p className='text-2xl text-center text-white'>PYEON BEOM JOON</p>
             <Image
               className='w-full'
               src={`/image/profile.png`}
