@@ -22,7 +22,7 @@ export enum Width {
 }
 
 type SectionProps = {
-  title:string,
+  title?:string,
   children: ReactNode,
   width:Width,
 }
@@ -36,11 +36,10 @@ type SectionProps = {
 
 const Section = ({title,children,width}:SectionProps) => {
   return (
-    <section className={`${width}`} >
+    <section className={`${width} h-full`} >
       <div className='flex flex-col justify-center'>
         <div className='min-w-max w-6/12'>
-          <h2 className='font-bold text-3xl mb-2'>{title}</h2>
-          <div style={{borderBottom:"1px solid black",width:"100%"}}></div>
+          {title && <h2 className='font-bold text-2xl mb-2'>{title}</h2>}
         </div>
       </div>
       {children}

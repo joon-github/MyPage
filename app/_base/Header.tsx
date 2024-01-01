@@ -5,9 +5,9 @@ const Header = () => {
     <header
       className={`h-14 z-10 flex justify-around items-center`}
     >
-      <p className='whiteText'>RESUME</p>
-      <p className='whiteText'>PROJECT</p>
-      <p className='whiteText'>BLOG</p>
+      <p className='text-xl'>RESUME</p>
+      <p className='text-xl'>PROJECT</p>
+      <p className='text-xl'>BLOG</p>
     </header>
   );
 };
