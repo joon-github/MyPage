@@ -9,28 +9,23 @@ const Career = () => {
         <div className='flex gap-4'>
           <div className='flex flex-col items-center justify-center'>
             <div>┌</div>
-            <div className='flex-1 border-r-2 border-gray-400 py-1'/>
-            <div>└</div>
+            <div className='flex-1 border-r-2 border-gray-400 py-1 -mt-1'/>
+            <div className='-mt-1'>└</div>
           </div>
           <div className='flex flex-col h-full items-center justify-between py-1'>
             <div className='text-lg font-bold w-full '>2023/01/02</div>
               <div className='flex flex-col'>
                 <div className='flex flex-col py-4 gap-2'>
                   <div className='flex gap-2'>
-                    <h3 className='text-base font-bold '>COMPANY - </h3>
-                    <p className=''>MSBENTER (주)</p>
+                    <h3 className='text-base font-bold '>MSBENTER (주)</h3>
                   </div>
                   <div className='flex gap-2'>
-                    <h3 className='text-base font-bold '>POSITION - </h3>
-                    <p className=''>FRONT END</p>
-                  </div>
-                  <div className='flex gap-2'>
-                    <h3 className='text-base font-bold '>개발 프로젝트 - </h3>
-                    <p className=''>프렌차이즈 ERP</p>
+                    <p className=''>FRONT END - </p>
+                    <p className=''>프렌차이즈 ERP 개발</p>
                   </div>
                 </div>
               </div>
-            <div className='text-lg font-bold w-full '>~ ing</div>
+            <div className='text-lg font-bold w-full'>~ ing</div>
           </div>
         </div>
             {/* <div>프로젝트 자세히 보기 ...</div> */}

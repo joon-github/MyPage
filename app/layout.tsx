@@ -1,4 +1,5 @@
-import './globals.css'
+// import './globals.css'
+import './globals.scss'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/app/_base/Header'
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AOSInit />
-      <body className={inter.className}>
+      <body className={`${inter.className} global`}>
         <Header/>
         <StyledJsxRegistry>{children}</StyledJsxRegistry> 
       </body>

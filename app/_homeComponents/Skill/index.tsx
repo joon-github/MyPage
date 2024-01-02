@@ -55,12 +55,13 @@ const Skill = () => {
     <Section title='SKILLS' width={Width.full}>
       <div id='Skill' className='flex w-full px-2 py-2'>
         <div className='flex flex-col justify-between gap-4'>
-          {skills.map(({label,items}) => {
+          {skills.map(({label,items},index) => {
             return (
-            <SkillWrapper label={label}>
-              {items.map(({fileName,label}) =>{
+            <SkillWrapper key={index} label={label}>
+              {items.map(({fileName,label},index) =>{
                 return(
-                  <SkillImage 
+                  <SkillImage
+                    key={index}
                     fileName={fileName}
                     label={label}
                   />

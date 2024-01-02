@@ -4,8 +4,7 @@
 
 @font-face {
   font-family: 'NanumMyeongjo';
-  src: url('/front2/public/fonts/nanum-myeongjo/NanumMyeongjo.ttf');
-  /* font-weight: 700; */
+  src: url('/front2/public/fonts/nanum-myeongjo/NanumMyeongjo.ttf') format('opentype');
   font-style: normal;
 }
 
@@ -19,14 +18,14 @@
 p{
   color:var(--MainTextColor);
   font-weight: 500;
+  .whiteText{
+    color: var(--BG_Color);
+  }
 }
 
 .subText{
   color: var(--SubTextColor);
   font-size: 12px;
-}
-p.whiteText{
-  color: var(--BG_Color);
 }
 
 h1,
@@ -45,14 +44,6 @@ h3{
   margin: 0;
 }
 
-header{
-  position: fixed;
-  top:0;
-  left: 0;
-  min-height: 54px;
-  width: 100%;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
-}
 
 body {
   background-color: var(--BG_Color);
@@ -88,14 +79,14 @@ main{
   border-bottom: 8px solid rgb(24, 127, 175);
   width: 100%;
   height: 1px;
-}
-.line::after{
-  content: "";
-  display: block;
-  position: relative;
-  height: 8px;
-  background-color: rgb(108 178 210);
-  width: 50%;
+  ::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: 8px;
+    background-color: rgb(108 178 210);
+    width: 50%;
+  }
 }
 
 #AboutMe{
@@ -105,10 +96,6 @@ main{
   min-width: 400px;
 }
 
-#test::after{
-  content: '┐';
-  display: flex;
-}
 
 @media (max-width:1000px) {
   body{

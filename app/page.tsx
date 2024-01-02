@@ -3,7 +3,7 @@ import Skill from './_homeComponents/Skill'
 import EXPERIENCE from './_homeComponents/EXPERIENCE'
 import Flex, { Direction } from './_base/Flex'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className='w-full'>
       <div className='mainContainer gap-16'>
