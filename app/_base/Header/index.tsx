@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import styles from '@/app/_base/Header/header.module.scss'
 import { useRouter } from 'next/navigation'
 import HeaderLink from './HeaderLink';
 
@@ -11,7 +10,7 @@ const Header = () => {
   }
   return (
     <header
-      className={`${styles.header} h-14 z-10 flex justify-around items-center`}
+      className={`h-14 z-10 flex justify-around items-center fixed top-0 w-full shadow-md`}
     >
       <HeaderLink to="/" text="RESUME" onClick={onClickMoveRouter} />
       <HeaderLink to="/project" text="PROJECT" onClick={onClickMoveRouter} />

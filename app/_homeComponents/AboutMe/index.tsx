@@ -4,7 +4,7 @@ import Section, { Width } from '@/app/_base/Section';
 
 const AboutMe = () => {
   const icons = [
-    { icon: 'User.png', text: '1994/12/09' },
+    { icon: 'User.png', text: '1994 / 12 / 09' },
     { icon: 'Phone.png', text: '010-3453-7506' },
     { icon: 'Spot.png', text: '인천광영시 서구 검암동' },
     { icon: 'Cap.png', text: '계산공업고등학교 졸업' },

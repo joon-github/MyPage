@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from '@/app/main.module.scss'
 
 const ProjectPage = () => {
   return (
-    <div>
+    <main className={`${styles.main}`}>
       aaaa
-    </div>
+    </main>
   );
 };
 
