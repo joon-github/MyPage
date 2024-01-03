@@ -3,6 +3,10 @@
   gap: 5px;
 }
 
+.container{
+  width: 50vw;
+}
+
 .contents{
   strong{
     @extend %base;
@@ -15,5 +19,13 @@
     &::before{
       content: "•";
     }
+  }
+}
+
+@media (max-width:650px) {
+  .container{
+    width: calc(100vw - 40px);
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
