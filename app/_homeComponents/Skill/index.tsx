@@ -54,7 +54,7 @@ const Skill = () => {
     <>
     <Section title='SKILLS' width={Width.full}>
       <div id='Skill' className='flex w-full px-2 py-2'>
-        <div className='flex flex-col justify-between gap-4'>
+        <div className='flex flex-col justify-between gap-8'>
           {skills.map(({label,items},index) => {
             return (
             <SkillWrapper key={index} label={label}>

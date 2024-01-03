@@ -7,9 +7,9 @@ export default function HomePage() {
   return (
     <main className={`${styles.main} pb-5`}>
       <div className={`${styles.mainContainer} gap-16`}>
-        <div className='flex h-full'>
+        <div className={`${styles.contentsWrapper} h-full`}>
           <AboutMe/>
-          <div id="etc" className='flex-1 overflow-auto h-full px-8'>
+          <div className={`${styles.contents} flex-1 h-full`}>
             <Flex direction={Direction.Column}>
               <Skill/>
               <EXPERIENCE/>

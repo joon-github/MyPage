@@ -1,0 +1,9 @@
+.aboutMe{
+  width: 33.33%;
+}
+
+@media (max-width:650px) {
+  .aboutMe{
+    width: 100%;
+  }
+}

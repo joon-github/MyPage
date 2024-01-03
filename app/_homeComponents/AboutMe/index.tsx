@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Section, { Width } from '@/app/_base/Section';
-
+import styles from './aboutMe.module.scss'
 const AboutMe = () => {
   const icons = [
     { icon: 'User.png', text: '1994 / 12 / 09' },
@@ -11,7 +11,7 @@ const AboutMe = () => {
     { icon: 'Cap.png', text: '코드스테이츠' },
   ]
   return (
-    <div id='AboutMe' className='border-r border-gray-300 w-4/12'>
+    <div id='AboutMe' className={`${styles.aboutMe}`}>
       <Section width={Width.full}>
         <article className='flex flex-col h-full'>
           <div className='bg-gray-800'>
