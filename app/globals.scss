@@ -15,6 +15,10 @@
   --SubTextColor : rgb(224, 224, 224);
 }
 
+*{
+  box-sizing: border-box;
+}
+
 
 
 p{
@@ -48,10 +52,6 @@ h3{
 
 body {
   background-color: var(--BG_Color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100vh;
   overflow: hidden;
   width: 100vw;
@@ -69,6 +69,7 @@ body {
     content: "";
     display: block;
     position: relative;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
     height: 8px;
     background-color: rgb(108 178 210);
     width: 50%;

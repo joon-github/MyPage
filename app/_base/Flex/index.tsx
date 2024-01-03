@@ -31,7 +31,7 @@ type FlexProp = {
 
 const Flex = ( { children, direction } : FlexProp) => {
   return (
-    <div id='Flex' className={`flex flex-1 ${direction} flex-wrap`}>
+    <div id='Flex' className={`flex flex-1 ${direction} flex-wrap gap-8`}>
       {children}
     </div>
   );

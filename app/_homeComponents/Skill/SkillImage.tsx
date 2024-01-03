@@ -13,8 +13,8 @@ const SkillImage = ({ fileName,label }:SkillImageProp) => {
       <Image
         className='w-18 h-18'
         src={`/image/${fileName}`}
-        height={64}
-        width={64}
+        height={50}
+        width={50}
         alt='logo'
       />
       <p className='text-xs text-center'>{label}</p>

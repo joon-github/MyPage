@@ -1,17 +1,18 @@
 import React from 'react';
 import { usePathname } from 'next/navigation'
+import Link from 'next/link';
 
 type HeaderLinkProps = {
   to: string;
   text: string;
-  onClick: (to: string) => void;
 };
 
-const HeaderLink = ({ to, text, onClick }:HeaderLinkProps) => {
-  const pathName = usePathname()
-  const isCurrentPage = pathName === to;
+const HeaderLink = ({ to, text }:HeaderLinkProps) => {
+  const pathName = usePathname().split("/")[1]
+  const toPath = to.split("/")[1]
+  const isCurrentPage = pathName === toPath;
   return (
-    <p className={`text-xl cursor-pointer hover:scale-110 ${isCurrentPage?"text-blue-900":"text-gray-300"}`} onClick={() => onClick(to)}>{text}</p>
+    <Link className={`font-bold text-xl cursor-pointer hover:scale-110 ${isCurrentPage?"text-blue-900":"text-gray-300"}`} href={to}>{text}</Link>
   )};
 
 export default HeaderLink;

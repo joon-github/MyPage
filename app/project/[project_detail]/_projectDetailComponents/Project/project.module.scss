@@ -1,0 +1,19 @@
+%base {
+  display: flex;
+  gap: 5px;
+}
+
+.contents{
+  strong{
+    @extend %base;
+    &::before{
+      content: "-";
+    }
+  }
+  p{
+    @extend %base;
+    &::before{
+      content: "•";
+    }
+  }
+}
