@@ -8,7 +8,7 @@ interface ContainerProps {
 
 const Container = ({ children,title }: ContainerProps) => {
   return (
-    <Card size='w-96'>
+    <Card size='w-96' width={600}>
       <div className='line'/>
       <article className='flex flex-col gap-4 w-full h-full p-2 rounded-lg '>
         <h3 className='font-bold underline'>

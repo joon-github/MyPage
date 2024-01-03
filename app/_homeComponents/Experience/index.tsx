@@ -1,6 +1,6 @@
 import React from 'react';
 import Section, { Width } from '@/app/_base/Section';
-import CareerWraaper from './CareerWraaper';
+import CareerWraaper from './Wraaper';
 const Career = () => {
   return (
     <>

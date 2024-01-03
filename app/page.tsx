@@ -1,6 +1,6 @@
 import AboutMe from './_homeComponents/AboutMe'
 import Skill from './_homeComponents/Skill'
-import EXPERIENCE from './_homeComponents/EXPERIENCE'
+import EXPERIENCE from './_homeComponents/Experience'
 import Flex, { Direction } from './_base/Flex'
 import styles from '@/app/main.module.scss'
 export default function HomePage() {

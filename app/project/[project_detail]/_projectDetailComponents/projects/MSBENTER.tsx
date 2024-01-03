@@ -7,7 +7,7 @@ const MSBENTER = () => {
         <h2>MSBENTER</h2>
         <div>2023.01.02 ~ ing</div>
       </div>
-      <div className='flex justify-center w-full flex-wrap gap-4 p-4'>
+      <div className='flex justify-center w-6/12 flex-wrap gap-4 p-4'>
         <Proejct title="연차관리">
           <Proejct.Contents subTitle='설명'>
             <p>기존에는 excel과 서류로 수행되던 연차관리를 관리하기 위해 개발된 모듈입니다.</p>
