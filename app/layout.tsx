@@ -17,12 +17,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  //htpp로 시작하면 https로 리다이렉트
+  if (typeof window !== 'undefined' && window.location.protocol === 'http:') {
+    const httpsUrl = `https://${window.location.host}${window.location.pathname}${window.location.search}`;
+    window.location.href = httpsUrl;
+    return null; // Optional: Return null to prevent rendering anything before the redirection takes place
+  }
+
+
+
   return (
     <html lang="en">
       <AOSInit />
       <body className={`${inter.className} global`}>
-        <Header/>
-        <StyledJsxRegistry>{children}</StyledJsxRegistry> 
+        <Header />
+        <StyledJsxRegistry>{children}</StyledJsxRegistry>
       </body>
     </html>
   )
