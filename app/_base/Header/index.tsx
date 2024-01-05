@@ -1,11 +1,13 @@
 'use client'
 import React, { useEffect } from 'react';
 import HeaderLink from './HeaderLink';
-
+import { useSetRecoilState } from "recoil";
+import { isManagerState } from '@/app/store/globalState';
 const Header = ({pw}:{pw:string|undefined}) => {
+  const setIsManagerState = useSetRecoilState(isManagerState);
   useEffect(()=>{
     if(pw === localStorage.getItem('AUTHENTICATION_PASSWORD')){
-      console.log("내가 범준이다!")
+      setIsManagerState(true);
     }else{
       console.log("안녕하세요. 편범준 개인 홈페이지 입니다.")
     }

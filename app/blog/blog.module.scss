@@ -1,21 +1,48 @@
+.blog{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
 .categoryWrapper{
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap:8px
+  flex-direction: column;
+  width:200px;
+  height: 100%;
 }
 
 .category{
   display: flex;
   flex-direction: column;
-  gap:10px;
-  width: 400px;
-  height: auto;
+  height: 40px;
+  justify-content: end;
 }
 
-@media (max-width: 650px) {
-  .category{
-    width: 100%;
-    height: 200px;
-  }
+.edites{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 4px;
+  height: 0px;
+  color:lightgray
+}
+
+.delete{
+  position: absolute;
+  left: 0;
+}
+
+.update{
+  position: absolute;
+  left: 40px;
+}
+
+.create{
+  position: absolute;
+  bottom: 30%;
+  color:lightgray
+}
+
+.postsWrapper{
+  flex:1;
 }
