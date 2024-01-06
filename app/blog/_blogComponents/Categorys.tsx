@@ -9,34 +9,27 @@ export type CategorysType = {
   category_name: string,
 }
 
-// const Categorys = async () => {
-//   const config = {
-//     headers: {
-//       "Accept":"application/json"
-//     },
-//     next: { revalidate: 5 },
-//   }
-//   const categoryData = await fetch(`${baseUrl}/api/blog/category`, config);
-//   const { result: { rows: categorys } } = await categoryData.json()
-//   return (
-//     <div className={blogStyles.categoryWrapper}>
-//       <AddCategory />
-//       {categorys.map(({ category_id, category_name}: CategorysType) => {
-//         return (
-//           <Category
-//             key={category_id}
-//             category_id={category_id}
-//             category_name={category_name}
-//           />
-//         )
-//       })}
-//     </div>
-//   );
-// };
 const Categorys = async () => {
+  const config = {
+    headers: {
+      "Accept":"application/json"
+    },
+    next: { revalidate: 5 },
+  }
+  const categoryData = await fetch(`${baseUrl}/api/blog/category`, config);
+  const { result: { rows: categorys } } = await categoryData.json()
   return (
     <div className={blogStyles.categoryWrapper}>
-
+      <AddCategory />
+      {categorys.map(({ category_id, category_name}: CategorysType) => {
+        return (
+          <Category
+            key={category_id}
+            category_id={category_id}
+            category_name={category_name}
+          />
+        )
+      })}
     </div>
   );
 };
