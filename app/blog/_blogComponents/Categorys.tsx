@@ -10,11 +10,13 @@ export type CategorysType = {
 }
 
 const Categorys = async () => {
-
-  const categoryData = await fetch(`${baseUrl}/api/blog/category`, {
+  const config = {
+    headers: {
+      "Accept":"application/json"
+    },
     next: { revalidate: 5 },
-    //cache: 'no-store'
-  });
+  }
+  const categoryData = await fetch(`${baseUrl}/api/blog/category`, config);
   const { result: { rows: categorys } } = await categoryData.json()
   return (
     <div className={blogStyles.categoryWrapper}>
