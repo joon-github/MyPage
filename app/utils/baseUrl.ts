@@ -1,1 +1,3 @@
-export const baseUrl = process.env.VERCEL_ENV === 'product' ? "https://beomjoon.site":"http://localhost:3000";
+export const baseUrl =   process.env.NODE_ENV === "production"
+? "https://beomjoon.site"
+: "http://localhost:3000";
