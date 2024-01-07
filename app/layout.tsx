@@ -25,7 +25,9 @@ export default function RootLayout({
       <AOSInit />
         <RecoilRootProvider>
           <StyledJsxRegistry>
-            <body className={`${inter.className} global`}>
+            <body 
+              // className={`${inter.className} global`}
+            >
               <Header pw={pw}/>
               {children}
             </body>
