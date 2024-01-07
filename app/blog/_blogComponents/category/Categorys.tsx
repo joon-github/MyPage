@@ -1,6 +1,6 @@
 import React from 'react';
 import { baseUrl } from '@/app/utils/baseUrl';
-import blogStyles from '../blog.module.scss'
+import blogStyles from '../../blog.module.scss'
 import Category from './Category';
 import AddCategory from './AddCategory';
 
@@ -16,7 +16,6 @@ const Categorys = async () => {
     },
     next: { revalidate: 5 },
   }
-  console.log(process.env.NODE_ENV)
   const categoryData = await fetch(`${baseUrl}/api/blog/category`, config);
   const { result: { rows: categorys } } = await categoryData.json()
   return (
