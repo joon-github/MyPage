@@ -2,11 +2,11 @@
 import React from 'react';
 import styles from '@/app/blog/blog.module.scss'
 import { CategorysType } from './Categorys';
-import { useRecoilValue } from 'recoil'
-import { isManagerState } from '@/app/store/globalState';
+import { useRecoilValue, useSetRecoilState } from 'recoil'
+import { isManagerState, selectedCategoryIdState} from '@/app/store/globalState';
 const Category = ({ category_id,category_name }: CategorysType) => {
   const isManager = useRecoilValue(isManagerState);
-
+  const setSelectedCategoryId = useSetRecoilState(selectedCategoryIdState)
   const onClickDeleteCategory = async () => {
     const isDelete = confirm('삭제하겠습니까?');
     if(!isDelete) return
@@ -19,7 +19,7 @@ const Category = ({ category_id,category_name }: CategorysType) => {
     }
   }
 
-  const onClickUpdateCategory = async () =>{
+  const onClickUpdateCategory = async () => {
     const name = prompt(`카테고리 이름:${category_name}`);
     if(!name) return
     try{
@@ -36,8 +36,14 @@ const Category = ({ category_id,category_name }: CategorysType) => {
     }
   }
 
+  const onClickCategory = () => {
+    if(category_id){
+      setSelectedCategoryId(category_id)
+    }
+  }
+
   return (
-    <div className={styles.category}>
+    <div className={styles.category} onClick={onClickCategory}>
       {isManager&&
         <div className={styles.edites}>
           <div className={styles.delete}>

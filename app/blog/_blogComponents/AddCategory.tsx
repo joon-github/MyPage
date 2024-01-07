@@ -2,7 +2,8 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil'
 import { isManagerState } from '@/app/store/globalState';
-import styles from '../../blog.module.scss'
+import styles from '../blog.module.scss'
+import Link from 'next/link';
 
 const AddCategory = () => {
   const isManager = useRecoilValue(isManagerState);
@@ -21,10 +22,14 @@ const AddCategory = () => {
       throw e
     }
   }
+
   return (
     <>
       {isManager&&
-        <button className={styles.create} onClick={onClickAddCategory}>추가</button>
+        <Link className={styles.postCreate} href={'/blog/create'}>게시물 추가</Link>
+      }
+      {isManager&&
+        <button className={styles.create} onClick={onClickAddCategory}>카테고리 추가</button>
       }
     </>
   );
