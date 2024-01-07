@@ -2,7 +2,6 @@ import React from 'react';
 import { baseUrl } from '@/app/utils/baseUrl';
 import blogStyles from '../../blog.module.scss'
 import Category from './Category';
-import AddCategory from './AddCategory';
 
 export type CategorysType = {
   category_id?: number,
@@ -20,7 +19,6 @@ const Categorys = async () => {
   const { result: { rows: categorys } } = await categoryData.json()
   return (
     <div className={blogStyles.categoryWrapper}>
-      <AddCategory />
       {categorys.map(({ category_id, category_name}: CategorysType) => {
         return (
           <Category
