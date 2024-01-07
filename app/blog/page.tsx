@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '@/app/main.module.scss'
 import blogStyles from '@/app/blog/blog.module.scss'
-import Categorys from './_blogComponents/Categorys';
+import Categorys from './_blogComponents/category/Categorys';
+import Posts from './_blogComponents/post/Posts';
 
 const BlogPage = async () => {
   return (
@@ -13,10 +14,8 @@ const BlogPage = async () => {
           </article>
         </section>
         <section className={blogStyles.blog}>
-          <Categorys/>
-          <div className={blogStyles.postsWrapper}>
-  d
-          </div>
+          <Categorys />
+          <Posts/>
         </section>
       </div>
     </main>

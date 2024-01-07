@@ -2,7 +2,7 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil'
 import { isManagerState } from '@/app/store/globalState';
-import styles from '../blog.module.scss'
+import styles from '../../blog.module.scss'
 
 const AddCategory = () => {
   const isManager = useRecoilValue(isManagerState);

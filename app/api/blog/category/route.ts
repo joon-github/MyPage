@@ -2,7 +2,7 @@ import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server'
 
 
-type PatchRequestData = {
+type CategoryDatType = {
   category_name: string;
   category_id?: string;
 };
@@ -21,7 +21,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request){
   try{
-    const { category_name }: PatchRequestData = await request.json();
+    const { category_name }: CategoryDatType = await request.json();
     await sql`INSERT INTO my_blog_category (category_name) VALUES (${category_name});`;
     return NextResponse.json({ success: true }, { status: 200 });
   }catch (error) {
@@ -43,7 +43,7 @@ export async function DELETE(request: Request){
 
 export async function PATCH(request: Request) {
   try {
-    const {category_name,category_id}:PatchRequestData = await request.json();
+    const {category_name,category_id}:CategoryDatType = await request.json();
     await sql`UPDATE my_blog_category SET category_name = ${category_name} WHERE category_id = ${category_id};`;
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
