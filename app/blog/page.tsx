@@ -7,13 +7,17 @@ const BlogPage = async () => {
   return (
     <main className={`${styles.main}`}>
       <div className='flex flex-col w-full h-full'>
-        <div>안녕하세요</div>
-        <div className={blogStyles.blog}>
+        <section className={blogStyles.banner}>
+          <article>
+            머리를 믿지 말고 손을 믿자
+          </article>
+        </section>
+        <section className={blogStyles.blog}>
           <Categorys/>
           <div className={blogStyles.postsWrapper}>
   d
           </div>
-        </div>
+        </section>
       </div>
     </main>
   );
