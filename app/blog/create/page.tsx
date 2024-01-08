@@ -17,11 +17,11 @@ const page = () => {
   const router = useRouter()
   const isManager = useRecoilValue(isManagerState);
   const editorRef = useRef<any>(null); 
-  useEffect(()=>{
-    if(!isManager){
-      router.push('/blog')
-    }
-  },[])
+  // useEffect(()=>{
+  //   if(!isManager){
+  //     router.push('/blog')
+  //   }
+  // },[])
   useEffect(()=>{
     const getData = async () => {
       const data = await fetch('/api/blog/category');

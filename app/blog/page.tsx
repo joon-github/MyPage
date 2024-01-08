@@ -7,14 +7,11 @@ import AddCategory from './_blogComponents/AddCategory';
 
 const BlogPage = async () => {
   return (
-    <main className={`${styles.main}`}>
-      <AddCategory />
-      <div className='flex flex-col w-full h-full'>
-        <section className={blogStyles.blog}>
-          <Categorys />
+    <main className='h-full'>
+      {/* <AddCategory /> */}
+        {/* <section className={blogStyles.blog}> */}
           <Posts/>
-        </section>
-      </div>
+        {/* </section> */}
     </main>
   );
 };
