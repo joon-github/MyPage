@@ -1,3 +1,8 @@
+.main{
+  flex:1;
+  padding: 20px;
+}
+
 .blog{
   display: flex;
   width: 100%;
@@ -65,4 +70,36 @@
   align-items: center;
   width: 100%;
   flex:1;
+}
+
+.postList{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  cursor: pointer;
+  :hover{
+    color: var(--MainThemeColor);
+  }
+  h3{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+}
+.postDataWrapper{
+  display: flex;
+  gap:8px
+}
+.date{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--MainThemeColor);
+}
+.postTitle{
+  font-size: 18px;
+  font-weight: 500;
+}
+.postSubTitle{
+  color:var(--SubTextColor);
+  font-weight: 400
 }
