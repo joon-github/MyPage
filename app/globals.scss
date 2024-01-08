@@ -12,7 +12,7 @@
   --BG_Color: rgb(245, 245, 245);
   --MainThemeColor : rgb(13, 101, 143);
   --MainTextColor: rgb(72, 72, 72);
-  --SubTextColor : rgb(224, 224, 224);
+  --SubTextColor : rgb(133, 133, 133);
 }
 
 *{
@@ -20,6 +20,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--BG_Color);
   height: 100vh;
   overflow: hidden;
