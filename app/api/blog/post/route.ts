@@ -11,13 +11,19 @@ type PostDataType = {
 };
 
 
-// export async function POST(request: Request){
-//   try{
-//     const { category_name }: PatchRequestData = await request.json();
-//     await sql`INSERT INTO my_blog_category (category_name) VALUES (${category_name});`;
-//     return NextResponse.json({ success: true }, { status: 200 });
-//   }catch (error) {
-//     return NextResponse.json({ error }, { status: 500 });
-//   }
-// }
+export async function GET(request: Request) {
+  try {
+    const result =
+      await sql`
+        SELECT 
+          * 
+        FROM
+         my_blog_post
+         `
+    return NextResponse.json({ result }, { status: 200 });
+  } catch (error) {
+    console.log(error)
+    return NextResponse.json({ error }, { status: 500 });
+  }
+}
 
