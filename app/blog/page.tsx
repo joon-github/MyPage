@@ -8,9 +8,9 @@ const BlogPage = async () => {
   return (
     <main className={blogStyles.main}>
       {/* <AddCategory /> */}
-        {/* <section className={blogStyles.blog}> */}
-          <Posts/>
-        {/* </section> */}
+      {/* <section className={blogStyles.blog}> */}
+      <Posts />
+      {/* </section> */}
     </main>
   );
 };
