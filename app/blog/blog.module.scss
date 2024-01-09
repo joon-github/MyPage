@@ -1,6 +1,7 @@
 .main{
   flex:1;
   padding: 20px;
+  overflow-x: auto;
 }
 
 .blog{
@@ -75,6 +76,8 @@
 .postList{
   display: flex;
   flex-direction: column;
+  width: 700px;
+  padding-top: 30px;
   gap:20px;
   cursor: pointer;
   :hover{
@@ -88,18 +91,29 @@
 }
 .postDataWrapper{
   display: flex;
-  gap:8px
+  gap:15px;
+  height: 100%;
+  overflow-x: auto;
 }
 .date{
   font-size: 18px;
+  padding-top: 1px;
   font-weight: 600;
   color: var(--MainThemeColor);
+  letter-spacing:2px;
 }
 .postTitle{
   font-size: 18px;
   font-weight: 500;
 }
 .postSubTitle{
+  font-size: 14px;
   color:var(--SubTextColor);
   font-weight: 400
+}
+
+@media (max-width:720px) {
+  .postList{
+    width: 100%;
+  }
 }

@@ -21,6 +21,7 @@ interface WysiwygEditorType {
 }
 
 const WysiwygEditor = ({initialValue="",editorRef}:WysiwygEditorType) => { 
+
     const toolbarItems = [ 
       ['heading', 'bold', 'italic', 'strike'], 
       ['hr'],
@@ -36,7 +37,7 @@ const WysiwygEditor = ({initialValue="",editorRef}:WysiwygEditorType) => {
         name="content"
         ref={editorRef}
         initialValue={initialValue} // 글 수정 시 사용 
-        initialEditType={'markdown'} // wysiwyg & markdown 
+        initialEditType={'markdown'}// wysiwyg & markdown 
         hideModeSwitch={true} 
         previewStyle="vertical"
         height='500px' 

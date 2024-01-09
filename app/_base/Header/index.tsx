@@ -14,7 +14,7 @@ const Header = ({pw}:{pw:string|undefined}) => {
   },[])
   return (
     <header
-      className={`relative top-0 h-14 z-10 flex justify-around items-center top-0 w-full shadow-md`}
+      className={`relative top-0 h-14 z-10 flex justify-around items-center top-0 w-full`}
     >
       <HeaderLink to="/" text="RESUME" />
       <HeaderLink to="/project" text="PROJECT" />
