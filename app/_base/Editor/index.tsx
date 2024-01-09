@@ -22,13 +22,13 @@ interface WysiwygEditorType {
 
 const WysiwygEditor = ({initialValue="",editorRef}:WysiwygEditorType) => { 
 
-    const toolbarItems = [ 
-      ['heading', 'bold', 'italic', 'strike'], 
-      ['hr'],
-       ['ul', 'ol', 'task'],
-        ['table', 'link'], 
-        // ['codeBlock'],
-        ['image'], ['code'], ['scrollSync'], ] 
+    // const toolbarItems = [ 
+    //   ['heading', 'bold', 'italic', 'strike'], 
+    //   ['hr'],
+    //    ['ul', 'ol', 'task'],
+    //     ['table', 'link'], 
+    //     // ['cb'],
+    //     ['image'], ['code'], ['scrollSync'], ] 
 
 
     
@@ -37,13 +37,11 @@ const WysiwygEditor = ({initialValue="",editorRef}:WysiwygEditorType) => {
         name="content"
         ref={editorRef}
         initialValue={initialValue} // 글 수정 시 사용 
-        initialEditType={'markdown'}// wysiwyg & markdown 
-        hideModeSwitch={true} 
+        initialEditType={'wysiwyg'}// wysiwyg & markdown 
         previewStyle="vertical"
         height='500px' 
         theme={''} // '' & 'dark' 
-        usageStatistics={true} 
-        toolbarItems={toolbarItems} 
+        // toolbarItems={toolbarItems} 
         plugins={[colorSyntax,[codeSyntaxHighlight, { highlighter: Prism }]]}
       /> 
     ) 
