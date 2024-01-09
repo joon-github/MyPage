@@ -7,7 +7,7 @@ import AddCategory from './_blogComponents/AddCategory';
 const BlogPage = async () => {
   return (
     <main className={blogStyles.main}>
-      {/* <AddCategory /> */}
+      <AddCategory />
       {/* <section className={blogStyles.blog}> */}
       <Posts />
       {/* </section> */}

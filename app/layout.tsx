@@ -21,7 +21,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pw = process.env.AUTHENTICATION_PASSWORD;
-  console.log("aaaa", process.env.NODE_ENV)
   return (
     <html lang="en">
       <AOSInit />

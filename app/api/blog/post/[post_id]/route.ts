@@ -9,17 +9,20 @@ type ContextType = {
 
 export async function GET(request: Request, {params:{post_id}}:ContextType) {
   try {
-    console.log(post_id)
     const result =
       await sql`
         SELECT 
-          A.* 
+          A.*,
+          B.category_name
         FROM
          my_blog_post AS A
         LEFT JOIN
           my_blog_category AS B
         ON
-          B.category_id = A.category_id`;
+          A.category_id = B.category_id
+        WHERE
+          post_id = ${post_id}
+        `;
     return NextResponse.json({ result }, { status: 200 });
   } catch (error) {
     console.log(error)

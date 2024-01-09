@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cache } from 'react';
 import { baseUrl } from '@/app/utils/baseUrl';
 import blogStyles from '@/app/blog/blog.module.scss'
 import Post from './Post';
@@ -14,18 +14,12 @@ export type PostType = {
 
 
 const Posts = async () => {
-  const config = {
-    headers: {
-      "Accept": "application/json"
-    },
-    next: { revalidate: 5 },
-  }
-  const categoryData = await fetch(`${baseUrl}/api/blog/post`, config);
-  if (categoryData.status !== 200) throw new Error("Failed to fetch data");
-  const { result: { rows: posts } } = await categoryData.json();
+  const postsData = await fetch(`${baseUrl}/api/blog/post`, {cache: "no-store"});
+  if (postsData.status !== 200) throw new Error("Failed to fetch data");
+  const { result: { rows: posts } } = await postsData.json();
   const newData: any = {};
   posts.forEach((data: PostType) => {
-    const year = data.create_at;
+    const year = data.create_at.slice(0,4);
     if (newData[year]) {
       newData[year].push(data);
     } else {

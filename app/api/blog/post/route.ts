@@ -19,6 +19,8 @@ export async function GET(request: Request) {
           * 
         FROM
          my_blog_post
+        ORDER BY
+         create_at DESC
          `
     return NextResponse.json({ result }, { status: 200 });
   } catch (error) {
