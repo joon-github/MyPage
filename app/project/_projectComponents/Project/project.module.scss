@@ -10,11 +10,20 @@
 .contents{
   strong{
     @extend %base;
+    font-weight: 600;
+    font-size: 18px;
     &::before{
       content: "-";
     }
   }
   p{
+    color: gray;
+    line-height:200%;
+    b{
+      display: contents;
+      color: var(--MainThemeColor);
+      font-weight: bold;
+    }
     @extend %base;
     &::before{
       content: "•";

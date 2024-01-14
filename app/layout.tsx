@@ -2,13 +2,10 @@
 import './globals.scss'
 import 'react-quill/dist/quill.snow.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Header from '@/app/_base/Header'
 import StyledJsxRegistry from './registry'
 import RecoilRootProvider from './recoilRootProvider'
 import { AOSInit } from './aos'
-import { RecoilRoot } from 'recoil'
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: '편범준',
@@ -27,7 +24,6 @@ export default function RootLayout({
       <RecoilRootProvider>
         <StyledJsxRegistry>
           <body
-          // className={`${inter.className} global`}
           >
             <Header pw={pw} />
             {children}

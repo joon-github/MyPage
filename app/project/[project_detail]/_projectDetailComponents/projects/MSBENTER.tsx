@@ -1,13 +1,26 @@
 import React from 'react';
-import { Proejct } from '../Project'
+import { Proejct } from '../../../_projectComponents/Project'
 const MSBENTER = () => {
   return (
-    <div className='flex flex-col items-center w-full h-full'>
+    <div className='flex flex-col items-center w-full h-full gap-4'>
       <div className='flex items-center gap-4'>
         <h2>MSBENTER</h2>
         <div>2023.01.02 ~ ing</div>
       </div>
-      <div className='flex justify-center w-6/12 flex-wrap gap-4 p-4'>
+        <Proejct title="Problem & Solves">
+          <Proejct.Contents subTitle='🔥 Problem'>
+            <p>페이지마다 화면의 미묘한 차이로 인해 각 페이지마다 <b>중복된 컴포넌트 작성</b>되고 있었습니다.<br/>
+            이로 인하여 코드의 가독성과 유지보수성을 저해하며, 새로운 페이지를 추가하거나 <b>수정 할때 많은 시간과 노력이 소요</b> 되는 문제를 초래했습니다.</p>
+          </Proejct.Contents>
+          <Proejct.Contents subTitle='💧 Solve'>
+            <p><b>Composition Component (합성 컴포넌트)</b> 디자인 패턴을 도입하여 문제를 해결했습니다.</p>
+            <p>합성 컴포넌트는 각 컴포넌트는 독립적으로 작동하며, 필요한 경우 새로운 컴포넌트를 추가하거나 수정할 수 있습니다. </p>
+          </Proejct.Contents>
+          <Proejct.Contents subTitle='⭐️ Result'>
+            <p>코드의 가독성이 향상 및 유지보수가 쉬워졌습니다.</p>
+            <p>기존 페이지 제작 코드 대비 <b>코드양 60% 감소</b>하였습니다.</p>
+          </Proejct.Contents>
+        </Proejct>
         <Proejct title="연차관리">
           <Proejct.Contents subTitle='설명'>
             <p>기존에는 excel과 서류로 수행되던 연차관리를 관리하기 위해 개발된 모듈입니다.</p>
@@ -68,7 +81,6 @@ const MSBENTER = () => {
             <p>완전 탐색을 통해 검색하여 검색어가 포함된 노드 표시</p>
           </Proejct.Contents>
         </Proejct>
-      </div>
     </div>
   );
 };
