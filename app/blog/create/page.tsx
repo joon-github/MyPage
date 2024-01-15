@@ -31,17 +31,16 @@ const page = () => {
       const getData = async () => {
         const postData = await fetch(`/api/blog/post/${post_id}`);
         const { rows: post  }:{rows:DataType[]} = await postData.json();
-        console.log('post',post)
         setData(post[0]);
       }
       getData();
     }
   },[post_id])
-  // useEffect(()=>{
-  //   if(!isManager){
-  //     router.push('/blog')
-  //   }
-  // },[])
+  useEffect(()=>{
+    if(!isManager){
+      router.push('/blog')
+    }
+  },[])
   useEffect(()=>{
     const getData = async () => {
       const data = await fetch('/api/blog/category');
@@ -54,6 +53,7 @@ const page = () => {
     const editorIns = editorRef.current.getInstance();
     const contentHtml = editorIns.getMarkdown(); 
     const submit = await addPost(formData,contentHtml,post_id);
+    console.log("submit",submit)
     if(submit){
       router.push('/blog')
     }else{

@@ -14,9 +14,10 @@ export type PostType = {
 
 
 const Posts = async () => {
-  const postsData = await fetch(`${baseUrl}/api/blog/post`, {cache: "no-store"});
+  const postsData = await fetch(`${baseUrl}/api/blog/post`, {next: { revalidate: 10 },});
   if (postsData.status !== 200) throw new Error("Failed to fetch data");
   const {rows:posts} = await postsData.json();
+  console.log("posts : ",posts)
   const newData: any = {};
   posts?.forEach((data: PostType) => {
     const year = data.create_at.slice(0,4);
