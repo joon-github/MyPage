@@ -52,7 +52,7 @@ const page = () => {
   },[])
   const onSubmit = async (formData:FormData) => {
     const editorIns = editorRef.current.getInstance();
-    const contentHtml = editorIns.getHTML(); 
+    const contentHtml = editorIns.getMarkdown(); 
     const submit = await addPost(formData,contentHtml,post_id);
     if(submit){
       router.push('/blog')

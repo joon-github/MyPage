@@ -71,7 +71,7 @@ const PostDetailPage = () => {
             <div className={style.date}>{data?.create_at.slice(0,10)}</div>
           </div>
         </header>
-        <div>
+        <div className='pb-20'>
           {data?.contents && 
             <EditorViewer contents={data.contents}/>
           }

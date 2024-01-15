@@ -44,15 +44,13 @@ const WysiwygEditor = ({initialValue="",editorRef}:WysiwygEditorType) => {
         name="content"
         ref={editorRef}
         initialValue={initialValue} // 글 수정 시 사용 
-        initialEditType={'wysiwyg'}// wysiwyg & markdown 
+        initialEditType={'markdown'}// wysiwyg & markdown 
         previewStyle="vertical"
         height='calc(100vh - 100px)' 
         theme={''} // '' & 'dark' 
         plugins={[colorSyntax,[codeSyntaxHighlight, { highlighter: Prism }]]}
         hooks={{
           addImageBlobHook: async (file:any, callback:any) => {
-            console.log(file)
-          
             const response = await fetch(`/api/image?filename=${file.name}`,{
               method:"POST",
               headers: { 'Content-Type': 'image/*', },
