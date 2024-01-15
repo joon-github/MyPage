@@ -3,9 +3,9 @@ import { NextResponse } from 'next/server'
 import { queryPromise } from '../../mysql';
 
 
-type CategoryDatType = {
-  category_name: string;
-  category_id?: string;
+type TagDatType = {
+  tag_name: string;
+  tag_id?: string;
 };
 
 export async function GET(request: Request) {
@@ -22,9 +22,9 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request){
   try{
-    const { category_name }: CategoryDatType = await request.json();
-    let queryString = `INSERT INTO my_blog_tag (category_name) VALUES (${category_name});`;
-    await queryPromise(queryString); 
+    const { tag_name }: TagDatType = await request.json();
+    let queryString = `INSERT INTO my_blog_tag (tag_name) VALUES (?);`;
+    await queryPromise(queryString,[tag_name]); 
     return NextResponse.json({ success: true }, { status: 200 });
   }catch (error) {
     return NextResponse.json({ error }, { status: 500 });
@@ -34,9 +34,9 @@ export async function POST(request: Request){
 export async function DELETE(request: Request){
   try{
     const { searchParams } = new URL(request.url);
-    const category_id = searchParams.get('category_id');
-    let queryString = `DELETE FROM my_blog_tag WHERE category_id=${category_id};`;
-    await queryPromise(queryString); 
+    const tag_id = searchParams.get('tag_id');
+    let queryString = `DELETE FROM my_blog_tag WHERE tag_id=?;`;
+    await queryPromise(queryString,[tag_id]); 
     return NextResponse.json({ success: true }, { status: 200 });
   }catch(error){
     return NextResponse.json({ error }, { status: 500 });
@@ -46,9 +46,9 @@ export async function DELETE(request: Request){
 
 export async function PATCH(request: Request) {
   try {
-    const {category_name,category_id}:CategoryDatType = await request.json();
-    let queryString = `UPDATE my_blog_tag SET category_name = ${category_name} WHERE category_id = ${category_id};`;
-    await queryPromise(queryString); 
+    const {tag_name,tag_id}:TagDatType = await request.json();
+    let queryString = `UPDATE my_blog_tag SET tag_name = ? WHERE tag_id = ?;`;
+    await queryPromise(queryString,[tag_name,tag_id]); 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error }, { status: 500 });

@@ -31,19 +31,19 @@ const page = () => {
       const getData = async () => {
         const postData = await fetch(`/api/blog/post/${post_id}`);
         const { rows: post  }:{rows:DataType[]} = await postData.json();
-        setData(post[0]);
+        setData(post?.[0]);
       }
       getData();
     }
   },[post_id])
   useEffect(()=>{
     if(!isManager){
-      router.push('/blog')
+      // router.push('/blog')
     }
   },[])
   useEffect(()=>{
     const getData = async () => {
-      const data = await fetch('/api/blog/category');
+      const data = await fetch('/api/blog/tag');
       const {rows} = await data.json();
       setCategorys(rows)
     }
@@ -63,7 +63,6 @@ const page = () => {
   }
   return (
     <div>
-      {/* <Image src={'https://mypage.site.s3.ap-northeast-2.amazonaws.com/next-s3-uploads/ac043ff1-1d57-46c3-aef1-4e8fd4707d01/_-CSS3-(1).png'} width={200} height={200} alt='test'/> */}
       <form 
         action={onSubmit}
         className={styles.form}

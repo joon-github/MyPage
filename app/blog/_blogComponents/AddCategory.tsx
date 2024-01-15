@@ -11,11 +11,11 @@ const AddCategory = () => {
     const name = prompt(`카테고리 추가`);
     if(!name) return
     try{
-      await fetch(`/api/blog/category`,{
+      await fetch(`/api/blog/tag`,{
         method:'POST',
         headers:{"Content-Type": `application/json`},
         body:JSON.stringify({
-          category_name:name,
+          tag_name:name,
         })
       })
     }catch(e){
@@ -29,7 +29,7 @@ const AddCategory = () => {
         <Link className={styles.postCreate} href={'/blog/create'}>게시물 추가</Link>
       }
       {isManager&&
-        <button className={styles.create} onClick={onClickAddCategory}>카테고리 추가</button>
+        <button className={styles.create} onClick={onClickAddCategory}>태그 추가</button>
       }
     </>
   );

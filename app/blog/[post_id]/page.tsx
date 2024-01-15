@@ -44,8 +44,8 @@ const PostDetailPage = () => {
     if(post_id){
       const getData = async () => {
         const postData = await fetch(`/api/blog/post/${post_id}`,{cache:'no-store'});
-        const {  rows: post  }:{rows:DataType[]} = await postData.json();
-        setData(post[0]);
+        const { rows: post }:{rows:DataType[]} = await postData.json();
+        setData(post?.[0]);
       }
       getData();
     }
