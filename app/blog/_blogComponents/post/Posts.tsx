@@ -28,7 +28,7 @@ const Posts = async () => {
   })
   return (
     <div className={blogStyles.postsWrapper}>
-      {/* {Object.keys(newData).map((key: string) => {
+      {Object.keys(newData).map((key: string) => {
         const data: PostType[] = newData[key];
         return (
           <Post
@@ -37,7 +37,7 @@ const Posts = async () => {
             year={key}
           />
         )
-      })} */}
+      })}
     </div>
   );
 };
