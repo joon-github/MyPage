@@ -9,7 +9,7 @@ const BlogPage = async () => {
     <main className={blogStyles.main}>
       <AddCategory />
       {/* <section className={blogStyles.blog}> */}
-      {/* <Posts /> */}
+      <Posts />
       {/* </section> */}
     </main>
   );

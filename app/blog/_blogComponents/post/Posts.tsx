@@ -1,4 +1,4 @@
-import React, { cache } from 'react';
+import React from 'react';
 import { baseUrl } from '@/app/utils/baseUrl';
 import blogStyles from '@/app/blog/blog.module.scss'
 import Post from './Post';
@@ -28,7 +28,7 @@ const Posts = async () => {
   })
   return (
     <div className={blogStyles.postsWrapper}>
-      {Object.keys(newData).map((key: string) => {
+      {/* {Object.keys(newData).map((key: string) => {
         const data: PostType[] = newData[key];
         return (
           <Post
@@ -37,7 +37,7 @@ const Posts = async () => {
             year={key}
           />
         )
-      })}
+      })} */}
     </div>
   );
 };
