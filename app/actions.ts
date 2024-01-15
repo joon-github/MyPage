@@ -13,7 +13,6 @@ export async function addPost(formData:FormData,contents:string,post_id:string|n
       console.log(queryString)
       await queryPromise(queryString,[title,contents,sub_title,tag_id]);  
     }else{
-      console.log("b")
       let queryString =`
       UPDATE 
         my_blog_post

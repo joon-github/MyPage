@@ -11,7 +11,7 @@ const pool = mysql.createPool({
   queueLimit: 0 // 연결 요청 대기열 제한 없음
 });
 
-export async function queryPromise(queryString:string,values:any) {
+export async function queryPromise(queryString:string,values?:any) {
   let connection;
   try {
     connection = await pool.getConnection(); // 연결 풀에서 연결 가져오기
