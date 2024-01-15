@@ -11,8 +11,8 @@ type PostDataType = {
 };
 
 
-export async function GET(request: Request) {
-    let queryString = "SELECT * FROM my_blog_post";  
+export async function GET() {
+    let queryString = "SELECT post_id,title,sub_title,create_at  FROM my_blog_post";  
       
     try {  
       const rows = await queryPromise(queryString);  
