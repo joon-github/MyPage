@@ -1,20 +1,21 @@
-blockquote{
-  border-left:4px solid rgb(13, 101, 143) !important;
+#blogContent blockquote {
+  border-left: 4px solid rgb(13, 101, 143) !important;
   background-color: rgba(227, 227, 227, 0.5) !important;
   padding: 20px !important;
-  
 }
-li::before{
+#blogContent li::before {
   font-weight: 450 !important;
   color: rgb(0, 0, 0) !important;
 }
-li,p{
+#blogContent li,
+#blogContent p {
   color: rgb(0, 0, 0) !important;
   font-weight: 400 !important;
   line-height: 1.8rem !important;
 }
 
-li,p{
+#blogContent li,
+#blogContent p {
   font-size: 1.125rem !important;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -22,7 +23,7 @@ li,p{
   margin-inline-end: 0px;
 }
 
-h1{
+#blogContent h1 {
   margin-top: 2.5rem !important;
   line-height: 1.5rem !important;
   font-size: 2.5rem !important;
@@ -30,7 +31,7 @@ h1{
   border-bottom: none !important;
 }
 
-h2{
+#blogContent h2 {
   margin-top: 2.5rem !important;
   line-height: 1.5rem !important;
   margin-bottom: 1rem !important;
@@ -38,13 +39,13 @@ h2{
   border-bottom: none !important;
 }
 
-h3{
+#blogContent h3 {
   font-size: 1.5rem !important;
   line-height: 1.5 !important;
   margin-bottom: 1rem !important;
 }
 
-hr{
+#blogContent hr {
   border: none;
   height: 1px;
   width: 100%;

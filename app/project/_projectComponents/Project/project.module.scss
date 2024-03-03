@@ -3,36 +3,36 @@
   gap: 5px;
 }
 
-.container{
+.container {
   width: 50vw;
 }
 
-.contents{
-  strong{
+.contents {
+  strong {
     @extend %base;
     font-weight: 600;
     font-size: 18px;
-    &::before{
+    &::before {
       content: "-";
     }
   }
-  p{
+  p {
     color: gray;
-    line-height:200%;
-    b{
+    line-height: 200%;
+    b {
       display: contents;
       color: var(--MainThemeColor);
       font-weight: bold;
     }
     @extend %base;
-    &::before{
+    &::before {
       content: "•";
     }
   }
 }
 
-@media (max-width:650px) {
-  .container{
+@media (max-width: 800px) {
+  .container {
     width: calc(100vw - 40px);
     padding-left: 10px;
     padding-right: 10px;

@@ -1,5 +1,4 @@
-
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 /**
  * Flex Component의 자식요소의 방향을 결정하는 enum class.
@@ -15,12 +14,12 @@ export enum Direction {
    * Column : 자식 요소를 열 방향으로 배열 합니다.
    * @type {Direction}
    */
-  Column = "flex-col"
+  Column = "flex-col",
 }
 
 type FlexProp = {
-  children: ReactNode,
-  direction: Direction
+  children: ReactNode;
+  direction: Direction;
 };
 
 /**
@@ -29,9 +28,9 @@ type FlexProp = {
  * @param {Direction} direction - flex direction 을 설정합니다.
  */
 
-const Flex = ( { children, direction } : FlexProp) => {
+const Flex = ({ children, direction }: FlexProp) => {
   return (
-    <div id='Flex' className={`flex flex-1 ${direction} flex-wrap gap-8`}>
+    <div id="Flex" className={`flex flex-1 ${direction} flex-wrap gap-8`}>
       {children}
     </div>
   );
