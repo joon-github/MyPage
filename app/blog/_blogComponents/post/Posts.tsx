@@ -16,7 +16,7 @@ export type PostType = {
 const Posts = async () => {
   const postsData = await fetch(`${baseUrl}/api/blog/post`, {
     // next: { revalidate: 10 },
-    // cache: "no-store",
+    cache: "no-store",
   });
   if (postsData.status !== 200) throw new Error("Failed to fetch data");
   const { rows: posts } = await postsData.json();
@@ -35,7 +35,7 @@ const Posts = async () => {
   //     a.create_at.localeCompare(b.create_at)
   //   );
   // });
-
+  console.log("postsData", postsData);
   return (
     <div className={blogStyles.postsWrapper}>
       {Object.keys(newData).map((key: string) => {
