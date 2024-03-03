@@ -6,6 +6,7 @@ import Header from '@/app/_base/Header'
 import StyledJsxRegistry from './registry'
 import RecoilRootProvider from './recoilRootProvider'
 import { AOSInit } from './aos'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: '편범준',
@@ -26,7 +27,9 @@ export default function RootLayout({
           <body
           >
             <Header pw={pw} />
-            {children}
+            <Suspense fallback={<p>Loading...</p>}>
+                {children}
+            </Suspense>
           </body>
         </StyledJsxRegistry>
       </RecoilRootProvider>
