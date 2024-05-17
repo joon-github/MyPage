@@ -24,12 +24,11 @@ export default function RootLayout({
       <AOSInit />
       <RecoilRootProvider>
         <StyledJsxRegistry>
-          <body
-          >
+          <body>
             <Header pw={pw} />
-            <Suspense fallback={<p>Loading...</p>}>
-                {children}
-            </Suspense>
+            {/* <Suspense fallback={<p>Loading...</p>}> */}
+              {children}
+            {/* </Suspense> */}
           </body>
         </StyledJsxRegistry>
       </RecoilRootProvider>

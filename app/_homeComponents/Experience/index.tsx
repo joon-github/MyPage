@@ -6,7 +6,7 @@ const Career = () => {
     <>
       <Section
         title="WORK EXPERIENCE"
-        width={Width.oneThird}
+        width={Width.full}
         flex={1}
         min={400}
       >

@@ -1,0 +1,28 @@
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-container {
+  font-size: 24px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '|';
+    animation: blink 1s infinite;
+    position: absolute;
+  }
+}
+
+.typing-text {
+  display: inline;
+  color: var(--Main_Text_Color);
+  font-size: 20px;
+}

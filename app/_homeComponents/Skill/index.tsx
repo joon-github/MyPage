@@ -51,7 +51,7 @@ const Skill = () => {
   ];
   return (
     <>
-      <Section title="SKILLS" width={Width.half} flex={1} min={400}>
+      <Section title="SKILLS" width={Width.full} flex={1} min={400}>
         <div id="Skill" className="flex px-2 py-2">
           <div className="flex flex-col justify-between gap-8">
             {skills.map(({ label, items }, index) => {
