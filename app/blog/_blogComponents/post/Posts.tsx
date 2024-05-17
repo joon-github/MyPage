@@ -18,8 +18,9 @@ const Posts = async () => {
     // next: { revalidate: 10 },
     cache: "no-store",
   });
-  if (postsData.status !== 200) throw new Error("Failed to fetch data");
   const { rows: posts } = await postsData.json();
+  console.log("postsData",postsData)
+  // if (postsData.status !== 200) throw new Error("Failed to fetch data");
   const newData: any = {};
   posts?.forEach((data: PostType) => {
     const year = data.create_at.slice(0, 4);
@@ -35,7 +36,6 @@ const Posts = async () => {
   //     a.create_at.localeCompare(b.create_at)
   //   );
   // });
-  console.log("postsData", postsData);
   return (
     <div className={blogStyles.postsWrapper}>
       {Object.keys(newData).map((key: string) => {
