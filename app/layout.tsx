@@ -26,10 +26,9 @@ export default function RootLayout({
         <StyledJsxRegistry>
           <body>
             <Header pw={pw} />
-            {/* <Suspense fallback={<p>Loading...</p>}> */}
-            
+            <Suspense fallback={<p>Loading...</p>}>
               {children}
-            {/* </Suspense> */}
+            </Suspense>
           </body>
         </StyledJsxRegistry>
       </RecoilRootProvider>

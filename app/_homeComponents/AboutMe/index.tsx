@@ -6,7 +6,7 @@ const AboutMe = () => {
     "사용자 친화적인 개발과 React와 Next에 관심이 많습니다.",
   ]
   return (
-    <section className="container flex flex-col h-screen p-10">
+    <section className="container flex flex-col h-screen p-10" >
       <p className="text-2xl p-4 felx-1">
         PYEON BEOM JOON
       </p>

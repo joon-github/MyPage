@@ -7,8 +7,8 @@ import "aos/dist/aos.css";
 export const AOSInit = () => {
   useEffect(() => {
     AOS.init({
-      easing: 'ease-out-quad',
       duration: 1000,
+      once: false, // 스크롤 시마다 애니메이션이 작동하도록 설정
     });
   }, [])
 

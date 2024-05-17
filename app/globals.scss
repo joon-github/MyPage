@@ -24,10 +24,8 @@ body {
   flex-direction: column;
   background-color: var(--BG_Color);
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   width: 100vw;
-  overflow-x: auto;
-  overflow-y: hidden;
   font-family: 'NotoSansKR-VariableFont_wght';
 }
 
