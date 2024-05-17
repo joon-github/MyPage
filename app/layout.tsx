@@ -27,6 +27,7 @@ export default function RootLayout({
           <body>
             <Header pw={pw} />
             {/* <Suspense fallback={<p>Loading...</p>}> */}
+            
               {children}
             {/* </Suspense> */}
           </body>

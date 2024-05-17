@@ -1,8 +1,22 @@
+
 .main {
+  margin-top: 60px;
+  height: 100vh; // Ensure the main container takes the full height
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+   scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.wrap {
   display: flex;
-  justify-content: center;
-  padding: 10px;
-  overflow-y: auto;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section {
+  height: calc(100vh - 60px); // Ensure each section takes the full height
+  scroll-snap-align: start;
 }
 
 .mainContainer {

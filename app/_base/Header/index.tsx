@@ -13,7 +13,7 @@ const Header = ({pw}:{pw:string|undefined}) => {
     }
   },[])
   return (
-    <header className="relative top-0 h-10 z-10 w-full">
+    <header className="absolute top-0 h-fit z-10 w-full">
       <div className="relative flex justify-end gap-4 items-center w-full py-4 px-8 border-b border-gray-200 text-lg font-bold text-gray-800 shadow-md bg-white/30 backdrop-blur-sm z-10">
         <HeaderLink to="/" text="RESUME" />
         <HeaderLink to="/project" text="PROJECT" />
