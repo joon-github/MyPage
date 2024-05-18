@@ -1,12 +1,12 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import "./styles.scss";
 
-interface TypingProps { 
+interface TypingProps {
   documents: string[];
 }
 
-const Typing = ({ documents }:TypingProps) => {
+const Typing = ({ documents }: TypingProps) => {
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -38,7 +38,7 @@ const Typing = ({ documents }:TypingProps) => {
 
   return (
     <div className="typing-container">
-      <span className={`typing-text`}>{currentText}</span>
+      <span className={`typing-text text-wrap`}>{currentText}</span>
     </div>
   );
 };

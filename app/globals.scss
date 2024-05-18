@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'NotoSansKR-VariableFont_wght';
+  font-family: "NotoSansKR-VariableFont_wght";
   font-weight: 600;
-  src: url('../public/fonts/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf') format('opentype');
+  src: url("../public/fonts/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf")
+    format("opentype");
 }
 
 :root {
   --BG_Color: rgb(251, 251, 251);
-  --MainThemeColor : rgb(13, 101, 143);
+  --MainThemeColor: rgb(13, 101, 143);
   --MainTextColor: rgb(72, 72, 72);
-  --SubTextColor : rgb(133, 133, 133);
+  --SubTextColor: rgb(133, 133, 133);
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -26,49 +27,45 @@ body {
   height: 100vh;
   // overflow: hidden;
   width: 100vw;
-  font-family: 'NotoSansKR-VariableFont_wght';
+  font-family: "NotoSansKR-VariableFont_wght";
 }
 
-
-
-
-p{
-  color:var(--MainTextColor);
+p {
+  color: var(--MainTextColor);
   font-weight: 500;
-  &.whiteText{
+  &.whiteText {
     color: var(--BG_Color);
   }
 }
 
-.subText{
+.subText {
   color: var(--SubTextColor);
   font-size: 12px;
 }
 
 h1,
-h2{
+h2 {
   color: var(--MainThemeColor);
 }
 
-h2{
+h2 {
   font-size: 20px;
   font-weight: 600;
 }
 
-h3{
+h3 {
   font-size: 18px;
   color: var(--MainTextColor);
   margin: 0;
 }
 
-
-.line{
+.line {
   margin-top: 10px;
   margin-bottom: 5px;
   border-bottom: 8px solid rgb(24, 127, 175);
   width: 100%;
   height: 1px;
-  &::after{
+  &::after {
     content: "";
     display: block;
     position: relative;
@@ -79,16 +76,48 @@ h3{
   }
 }
 
-#AboutMe{
-  min-width: 240px
+#AboutMe {
+  min-width: 240px;
 }
 
-
-
-
-@media (max-width:1000px) {
-  body{
-    min-width: 100%;
-  }
+/* 툴팁 스타일 */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
+.tooltip::after {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 125%; /* 툴팁이 위에 위치하도록 조정 */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.tooltip::after::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+}

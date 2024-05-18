@@ -1,23 +1,45 @@
-'use client'
-import React, { useEffect } from 'react';
-import HeaderLink from './HeaderLink';
+"use client";
+import React, { useEffect } from "react";
+import HeaderLink from "./HeaderLink";
 import { useSetRecoilState } from "recoil";
-import { isManagerState } from '@/app/store/globalState';
-const Header = ({pw}:{pw:string|undefined}) => {
+import { isManagerState } from "@/app/store/globalState";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
+
+const Header = ({ pw }: { pw: string | undefined }) => {
   const setIsManagerState = useSetRecoilState(isManagerState);
-  useEffect(()=>{
-    if(pw === localStorage.getItem('AUTHENTICATION_PASSWORD')){
+
+  useEffect(() => {
+    if (pw === localStorage.getItem("AUTHENTICATION_PASSWORD")) {
       setIsManagerState(true);
-    }else{
-      console.log("안녕하세요. 편범준 개인 홈페이지 입니다.")
+    } else {
+      console.log("안녕하세요. 편범준 개인 홈페이지 입니다.");
     }
-  },[])
+  }, []);
+
   return (
     <header className="absolute top-0 h-fit z-10 w-full">
-      <div className="relative flex justify-end gap-4 items-center w-full py-4 px-8 border-b border-gray-200 text-lg font-bold text-gray-800 shadow-md bg-white/30 backdrop-blur-sm z-10">
-        <HeaderLink to="/" text="RESUME" />
-        <HeaderLink to="/project" text="PROJECT" />
-        <HeaderLink to="/blog" text="BLOG" />
+      <div className="relative flex justify-between items-center w-full py-4 px-8 border-b border-gray-200 text-lg font-bold text-gray-800 shadow-md bg-white/30 backdrop-blur-sm z-10">
+        <div className="flex gap-4">
+          <div className="relative flex items-center gap-1 cursor-pointer group">
+            <MdOutlineEmail size={20} />
+            <p className="subText absolute top-8 hidden group-hover:block bg-white px-2 py-1 rounded-md shadow-md">
+              ehdfkd941209@gamil.com
+            </p>
+          </div>
+          <div className="relative flex items-center gap-1 cursor-pointer group">
+            <FaGithub size={20} />
+            <p className="subText absolute top-8 hidden group-hover:block bg-white px-2 py-1 rounded-md shadow-md">
+              https://github.com/joon-github
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-4">
+          <HeaderLink to="/" text="RESUME" />
+          <HeaderLink to="/project" text="PROJECT" />
+          <HeaderLink to="/blog" text="BLOG" />
+        </div>
       </div>
     </header>
   );
