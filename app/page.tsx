@@ -6,7 +6,7 @@ import EXPERIENCE from "./_homeComponents/Experience";
 import styles from "@/app/main.module.scss";
 import useIntersectionObserver from "./utils/useIntersectionObserver";
 import { FaAngleDoubleDown } from "react-icons/fa";
-
+import { LuMouse } from "react-icons/lu";
 export default function HomePage() {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const skillRef = useRef<HTMLDivElement>(null);
@@ -92,8 +92,9 @@ export default function HomePage() {
           <EXPERIENCE />
         </div>
         {!atBottom && (
-          <div className="flex flex-col items-center justify-center fixed bottom-10 float">
-            <FaAngleDoubleDown size={30} color="gray" />
+          <div className="flex flex-col items-center justify-center fixed bottom-[100px] float">
+            <LuMouse size={30} color="gray" />
+            <FaAngleDoubleDown size={20} color="gray" />
           </div>
         )}
       </div>

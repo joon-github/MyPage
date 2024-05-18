@@ -43,7 +43,8 @@ const Skill = () => {
     },
   ];
   return (
-    <div className="h-full flex items-center  pb-[100px]">
+    <section className="flex flex-col h-full flex justify-center pb-[100px]">
+      <h3 className="text-2xl mb-10 text-blue-900">SKILLS</h3>
       <div className="flex flex-col justify-between gap-8">
         {skills.map(({ label, items }, index) => {
           return (
@@ -57,7 +58,7 @@ const Skill = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
