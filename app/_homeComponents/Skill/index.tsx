@@ -33,7 +33,7 @@ const Skill = () => {
       ],
     },
     {
-      label: "버전관리",
+      label: "VERSION MANAGEMENT",
       items: [
         { fileName: "GitHub.png", label: "GitHub" },
         { fileName: "gitAction.png", label: "Git Action" },
