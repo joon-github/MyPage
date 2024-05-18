@@ -9,19 +9,29 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   position: relative;
+  width: 100%;
 }
 
 .wrap {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 800px;
+  width: 100%;
 }
 
 .section {
   height: calc(100vh - 60px);
   scroll-snap-align: start;
-  // position: relative;
-  // transition: transform 0.5s ease-in-out;
+  width: 800px;
+}
+
+//반응형
+@media screen and (max-width: 800px) {
+  .section {
+    width: 100vw;
+    padding: 30px;
+  }
 }
 
 .main::-webkit-scrollbar {

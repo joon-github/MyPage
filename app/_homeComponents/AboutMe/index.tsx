@@ -8,8 +8,8 @@ const AboutMe = () => {
   return (
     <section className="flex flex-col justify-center items-between h-screen p-10 gap-10">
       <div className="flex flex-col gap-4">
-        <p className="text-3xl">PYEON BEOM JOON</p>
-        <div className="flex gap-4">
+        <p className="text-3xl text-blue-900">PYEON BEOM JOON</p>
+        <div className="flex gap-4 flex-wrap">
           <p>#FULL STACK</p>
           <p>#TYPE SCRIPT</p>
           <p>#NEXT</p>
