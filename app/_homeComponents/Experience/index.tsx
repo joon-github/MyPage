@@ -14,15 +14,15 @@ const Career = () => {
 
   return (
     <article className="flex flex-col h-full justify-center pb-[100px]">
-      <h3 className="text-2xl mb-10 text-blue-900">WORK</h3>
+      <h3 className="sm:text-2xl text-xl mb-10 text-blue-900">WORK</h3>
       <div className="flex flex-col justify-between gap-8">
-        <div className="text-2xl font-bold">2023/01/02 ~ ing</div>
+        <div className="sm:text-2xl text-xl font-bold">2023/01/02 ~ ing</div>
         <div className="flex flex-col gap-8">
           <div className="flex gap-4">
-            <p className="text-xl font-bold">MSBENTER (주)</p>
+            <p className="sm:text-lg text-base font-bold">MSBENTER</p>
             <div>
               <h4 className="mb-4">주요업무</h4>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-2 sm:text:base text-sm">
                 <li> • 프렌차이즈 ERP 모듈 개발 및 유지 보수</li>
                 <li> • 사내 그룹웨어 개발 및 유지 보수</li>
                 <li> • 발주 프로그램 개발 및 유지 보수</li>

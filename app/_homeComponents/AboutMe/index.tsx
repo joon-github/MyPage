@@ -8,8 +8,8 @@ const AboutMe = () => {
   return (
     <section className="flex flex-col justify-center items-between h-screen p-10 gap-10 pb-[200px]">
       <div className="flex flex-col gap-4">
-        <p className="text-3xl text-blue-900">PYEON BEOM JOON</p>
-        <div className="flex gap-4 flex-wrap">
+        <p className="sm:text-3xl text-xl text-blue-900">PYEON BEOM JOON</p>
+        <div className="flex sm:gap-4 gap-2 flex-wrap sm:text-base text-sm">
           <p>#FULL STACK</p>
           <p>#TYPE SCRIPT</p>
           <p>#NEXT</p>
@@ -22,7 +22,7 @@ const AboutMe = () => {
         <div className="min-h-[40px]">
           <Typing documents={documents} />
         </div>
-        <p>
+        <p className="sm:text-base text-sm">
           저는 타입스크립트 풀스택 개발자입니다. 전반적인 웹에 대한 개념에 대한
           이해 있으며, 사용자 중심 디자인 사고와 접근성을 고려한 웹 서비스
           개발에 힘쓰고 있습니다.
