@@ -52,3 +52,40 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  #blogContent h1 {
+    font-size: 2rem !important;
+  }
+  #blogContent h2 {
+    font-size: 1.5rem !important;
+  }
+  #blogContent h3 {
+    font-size: 1.25rem !important;
+  }
+  #blogContent p {
+    font-size: 1rem !important;
+  }
+  #blogContent blockquote {
+    padding: 10px !important;
+  }
+  #blogContent li::before {
+    font-weight: 450 !important;
+    color: rgb(0, 0, 0) !important;
+  }
+  #blogContent li,
+  #blogContent p {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 400 !important;
+    line-height: 1.5rem !important;
+  }
+
+  #blogContent li,
+  #blogContent p {
+    font-size: 1rem !important;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
