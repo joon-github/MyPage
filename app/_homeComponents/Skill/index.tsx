@@ -25,7 +25,15 @@ const Skill = () => {
         { fileName: "React-Queary.png", label: "React-Queary" },
       ],
     },
-
+    {
+      label: "BACKEND",
+      items: [
+        { fileName: "Node.png", label: "Node.js" },
+        { fileName: "Nest.png", label: "Nest" },
+        { fileName: "TypeOrm.png", label: "Type orm" },
+        { fileName: "Mysql.png", label: "My sql" },
+      ],
+    },
     {
       label: "버전관리",
       items: [
