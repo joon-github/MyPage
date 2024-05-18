@@ -46,7 +46,10 @@ const Career = () => {
       </div>
 
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          onClick={handleCloseModal}
+        >
           <div className="relative">
             <Image
               src={selectedImage}
@@ -56,7 +59,7 @@ const Career = () => {
             />
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-blue-900 text-3xl z-10"
+              className="absolute top-4 right-4 text-white text-3xl z-10"
             >
               &times;
             </button>
