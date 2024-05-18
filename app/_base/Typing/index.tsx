@@ -12,9 +12,9 @@ const Typing = ({ documents }: TypingProps) => {
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const typingSpeed = 100; // typing speed in ms
-  const deletingSpeed = 50; // deleting speed in ms
-  const pause = 2000; // pause between texts
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const pause = 2000;
 
   useEffect(() => {
     const type = () => {
@@ -39,6 +39,7 @@ const Typing = ({ documents }: TypingProps) => {
   return (
     <div className="typing-container">
       <span className={`typing-text text-wrap`}>{currentText}</span>
+      <span>|</span>
     </div>
   );
 };

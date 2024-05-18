@@ -24,13 +24,13 @@ const Header = ({ pw }: { pw: string | undefined }) => {
         <div className="flex gap-4">
           <div className="relative flex items-center gap-1 cursor-pointer group">
             <MdOutlineEmail size={20} />
-            <p className="subText absolute top-8 hidden group-hover:block bg-white px-2 py-1 rounded-md shadow-md">
+            <p className="subText md:inline hidden group-hover:block absolute md:relative md:static md:top-auto md:left-auto top-8 bg-white px-2 py-1 rounded-md group-hover:shadow-md">
               ehdfkd941209@gamil.com
             </p>
           </div>
           <div className="relative flex items-center gap-1 cursor-pointer group">
             <FaGithub size={20} />
-            <p className="subText absolute top-8 hidden group-hover:block bg-white px-2 py-1 rounded-md shadow-md">
+            <p className="subText md:inline hidden group-hover:block absolute md:relative md:static md:top-auto md:left-auto top-8 bg-white px-2 py-1 rounded-md group-hover:shadow-md">
               https://github.com/joon-github
             </p>
           </div>

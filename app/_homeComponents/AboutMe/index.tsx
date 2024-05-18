@@ -3,10 +3,10 @@ import Typing from "@/app/_base/Typing";
 const AboutMe = () => {
   const documents = [
     "안녕하세요. 풀스택 개발자 편범준 입니다.",
-    "사용자 친화적인 개발과 React와 Next에 관심이 많습니다.",
+    "사용자 친화적인 개발과 효율적으로 코드를 작성하는것을 좋아합니다.",
   ];
   return (
-    <section className="flex flex-col items-center justify-center h-screen p-10 gap-10">
+    <section className="flex flex-col justify-center items-between h-screen p-10 gap-10">
       <div className="flex flex-col gap-4">
         <p className="text-3xl">PYEON BEOM JOON</p>
         <div className="flex gap-4">
