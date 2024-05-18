@@ -8,13 +8,13 @@ const ProjectPage = () => {
   };
   return (
     <main className={`${styles.main}`}>
-      <div className="flex flex-col items-center justify-center w-full p-10">
-        <h1 className="text-3xl mb-10 text-blue-900">PROJECTS</h1>
+      <div className="flex flex-col items-center justify-center w-full sm:p-10 p-5">
+        <h1 className="sm:text-3xl text-xl mb-10 text-blue-900">PROJECTS</h1>
         <div className="flex flex-col gap-4">
-          <h3 className="text-xl">QR ORDER</h3>
-          <div className="flex gap-2">
+          <h3 className="sm:text-xl text-lg">QR ORDER</h3>
+          <div className="flex gap-2 sm:text-base text-sm sm:flex-row flex-col">
             <div className="font-bold">프로젝트 소개 : </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 ">
               <div>소상공인을 위한 주문 솔루션 입니다.</div>
               <div>
                 고객은 QR 하나로 자신의 핸드폰으로 키오스크를 대채 할 수 있으며
