@@ -15,11 +15,9 @@ const Skill = () => {
       items: [
         { fileName: "React.png", label: "React" },
         { fileName: "NextJs.svg", label: "Next.js" },
-        { fileName: "CSS3.png", label: "CSS3" },
         { fileName: "StyledComponent.png", label: "Styled Component" },
         { fileName: "Tailwind.png", label: "Tailwind" },
         { fileName: "AntDesign.png", label: "AntDesign" },
-        { fileName: "Bootstrap.png", label: "Bootstrap" },
         { fileName: "Recoil.png", label: "Recoil" },
         { fileName: "Redux.png", label: "Redux" },
         { fileName: "React-Queary.png", label: "React-Queary" },
@@ -43,7 +41,7 @@ const Skill = () => {
     },
   ];
   return (
-    <section className="flex flex-col h-full flex justify-center pb-[100px]">
+    <section className="flex flex-col h-full flex justify-center pb-[100px] px-10">
       <h3 className="text-2xl mb-10 text-blue-900">SKILLS</h3>
       <div className="flex flex-col justify-between gap-8">
         {skills.map(({ label, items }, index) => {

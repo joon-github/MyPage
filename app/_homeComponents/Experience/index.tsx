@@ -13,7 +13,7 @@ const Career = () => {
   };
 
   return (
-    <article className="flex flex-col h-full justify-center pb-[100px]">
+    <article className="flex flex-col h-full justify-center pb-[100px] p-10">
       <h3 className="sm:text-2xl text-xl mb-10 text-blue-900">WORK</h3>
       <div className="flex flex-col justify-between gap-8">
         <div className="sm:text-2xl text-xl font-bold">2023/01/02 ~ ing</div>
