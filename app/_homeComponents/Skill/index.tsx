@@ -43,7 +43,7 @@ const Skill = () => {
     },
   ];
   return (
-    <div className="h-full flex items-center">
+    <div className="h-full flex items-center  pb-[100px]">
       <div className="flex flex-col justify-between gap-8">
         {skills.map(({ label, items }, index) => {
           return (
