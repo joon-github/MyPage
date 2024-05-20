@@ -19,7 +19,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="flex flex-col gap-1">
-        <div className="min-h-[40px]">
+        <div className="h-[50px]">
           <Typing documents={documents} />
         </div>
         <p className="sm:text-base text-sm">

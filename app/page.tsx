@@ -82,7 +82,7 @@ export default function HomePage() {
   return (
     <main className={`${styles.main} pb-5`}>
       <div className={styles.wrap}>
-        <div className={styles.section} ref={aboutMeRef}>
+        <div className={styles.section + " fadeDown"} ref={aboutMeRef}>
           <AboutMe />
         </div>
         <div className={styles.section} ref={skillRef}>
