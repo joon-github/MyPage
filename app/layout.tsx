@@ -8,7 +8,7 @@ import { AOSInit } from "./aos";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "편범준",
+  title: "Welcome to my site",
   description: "편범준 개인 사이트 입니다.",
 };
 
