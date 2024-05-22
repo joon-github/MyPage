@@ -61,7 +61,7 @@ const page = () => {
     }
   };
   return (
-    <div>
+    <div className="mt-[80px]">
       <form action={onSubmit} className={styles.form}>
         <div className={styles.inputs}>
           <div>
