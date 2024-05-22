@@ -89,7 +89,7 @@ const page = () => {
           </div>
           <button type="submit">저장</button>
         </div>
-        <Editor editorRef={editorRef} initialValue={data?.contents} />
+        <Editor editorRef={editorRef} initialValue={data?.contents||"입력"} />
       </form>
     </div>
   );
