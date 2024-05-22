@@ -53,7 +53,7 @@ const Header = ({ pw }: { pw: string | undefined }) => {
         </div>
         <div className="flex gap-4">
           <HeaderLink to="/" text="RESUME" />
-          <HeaderLink to="/project" text="PROJECT" />
+          <HeaderLink to="/portfolio" text="PORTFOLIO" />
           <HeaderLink to="/blog" text="BLOG" />
         </div>
       </div>
