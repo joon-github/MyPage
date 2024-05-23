@@ -20,6 +20,8 @@ export async function queryPromise(queryString: string, values?: any) {
   } catch (error) {
     throw error; // 오류 발생 시 throw
   } finally {
-    if (connection) connection.release(); // 연결을 풀로 다시 반환
+    if (connection) {
+      await connection.release();
+    } // 연결을 풀로 다시 반환
   }
 }
