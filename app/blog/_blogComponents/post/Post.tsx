@@ -20,7 +20,7 @@ const Post = ({ data, year }: PostPropsType) => {
         return (
           <div key={post.post_id} className={blogStyles.postDataWrapper} onClick={()=>{onClickPost(String(post.post_id))}}>
             <span className={blogStyles.date}>{post.create_at.slice(5,10)}</span>
-            <div>
+            <div className='flex-1'>
               <h4 className={blogStyles.postTitle}>{post.title}</h4>
               <h5 className={blogStyles.postSubTitle}>{post.sub_title}</h5>
             </div>
