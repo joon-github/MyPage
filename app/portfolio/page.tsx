@@ -10,7 +10,6 @@ const ProjectPage = () => {
   return (
     <main className={`${styles.main}`}>
       <div className="flex flex-col items-center justify-center w-full sm:p-10 p-5">
-        <h1 className="sm:text-3xl text-xl mb-10 text-blue-900">PORTFOLIO</h1>
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <div className="flex justify-between">
