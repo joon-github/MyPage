@@ -1,5 +1,5 @@
-"use clinet";
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { baseUrl } from "@/app/utils/baseUrl";
 import blogStyles from "@/app/blog/blog.module.scss";
 import Post from "./Post";
@@ -13,14 +13,11 @@ export type PostType = {
   create_at: string;
 };
 
-const Posts = async () => {
+const fetchPosts = async () => {
   const postsData = await fetch(`${baseUrl}/api/blog/post`, {
-    // next: { revalidate: 10 },
     cache: "no-store",
   });
   const { rows: posts } = await postsData.json();
-  console.log("postsData",postsData)
-  // if (postsData.status !== 200) throw new Error("Failed to fetch data");
   const newData: any = {};
   posts?.forEach((data: PostType) => {
     const year = data.create_at.slice(0, 4);
@@ -31,16 +28,25 @@ const Posts = async () => {
     }
   });
 
-  // Object.keys(newData).forEach((year) => {
-  //   newData[year].sort((a: PostType, b: PostType) =>
-  //     a.create_at.localeCompare(b.create_at)
-  //   );
-  // });
+  return newData;
+};
+
+const Posts = () => {
+  const [data, setData] = useState<any>({});
+
+  useEffect(() => {
+    const getData = async () => {
+      const newData = await fetchPosts();
+      setData(newData);
+    };
+    getData();
+  }, []);
+
   return (
     <div className={blogStyles.postsWrapper}>
-      {Object.keys(newData).map((key: string) => {
-        const data: PostType[] = newData[key];
-        return <Post key={key} data={data} year={key} />;
+      {Object.keys(data).map((key: string) => {
+        const postData: PostType[] = data[key];
+        return <Post key={key} data={postData} year={key} />;
       })}
     </div>
   );
