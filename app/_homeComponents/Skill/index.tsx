@@ -8,6 +8,7 @@ const Skill = () => {
       items: [
         { fileName: "JavaScript ES6.png", label: "JavaScript" },
         { fileName: "TypeScript.png", label: "TypeScript" },
+        { fileName: "Python.png", label: "Python" },
       ],
     },
     {
@@ -28,8 +29,9 @@ const Skill = () => {
       items: [
         { fileName: "Node.png", label: "Node.js" },
         { fileName: "Nest.png", label: "Nest" },
-        { fileName: "TypeOrm.png", label: "Type orm" },
-        { fileName: "Mysql.png", label: "My sql" },
+        { fileName: "TypeOrm.png", label: "TypeORM" },
+        { fileName: "Mysql.png", label: "MySQL" },
+        { fileName: "Fastapi.png", label: "FastApi" },
       ],
     },
     {
