@@ -39,7 +39,7 @@ const page = () => {
   }, [post_id]);
   useEffect(() => {
     if (!isManager) {
-      // router.push('/blog')
+      router.push('/blog')
     }
   }, []);
   useEffect(() => {
