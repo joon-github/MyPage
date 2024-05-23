@@ -22,15 +22,11 @@ const AddCategory = () => {
       throw e
     }
   }
-
+  const isHidden = isManager? "":" hidden";
   return (
     <>
-      {isManager&&
-        <Link className={styles.postCreate} href={'/blog/create'}>게시물 추가</Link>
-      }
-      {isManager&&
-        <button className={styles.create} onClick={onClickAddCategory}>태그 추가</button>
-      }
+      <Link className={styles.postCreate + isHidden} href={'/blog/create'}>게시물 추가</Link>
+      <button className={styles.create + isHidden} onClick={onClickAddCategory}>태그 추가</button>
     </>
   );
 };

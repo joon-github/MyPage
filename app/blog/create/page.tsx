@@ -12,6 +12,7 @@ import styles from "./create.module.scss";
 import { useS3Upload, getImageData } from "next-s3-upload";
 import Image from "next/image";
 const Editor = dynamic(() => import("@/app/_base/Editor"), { ssr: false });
+const Editor2 = dynamic(() => import("@/app/_base/Editor2"), { ssr: false });
 
 interface CategoryType {
   tag_id: number;
@@ -89,7 +90,11 @@ const page = () => {
           </div>
           <button type="submit">저장</button>
         </div>
-        <Editor editorRef={editorRef} initialValue={data?.contents||"입력"} />
+        {post_id ? (
+          <Editor editorRef={editorRef} initialValue={data?.contents} />
+        ) : (
+          <Editor2 editorRef={editorRef} />
+        )}
       </form>
     </div>
   );

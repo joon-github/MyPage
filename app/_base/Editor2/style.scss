@@ -1,0 +1,91 @@
+#blogContent blockquote {
+  border-left: 4px solid rgb(13, 101, 143) !important;
+  background-color: rgba(227, 227, 227, 0.5) !important;
+  padding: 20px !important;
+}
+#blogContent li::before {
+  font-weight: 450 !important;
+  color: rgb(0, 0, 0) !important;
+}
+#blogContent li,
+#blogContent p {
+  color: rgb(0, 0, 0) !important;
+  font-weight: 400 !important;
+  line-height: 1.8rem !important;
+}
+
+#blogContent li,
+#blogContent p {
+  font-size: 1.125rem !important;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+#blogContent h1 {
+  margin-top: 4rem !important;
+  line-height: 2.5rem !important;
+  font-size: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+  border-bottom: none !important;
+}
+
+#blogContent h2 {
+  margin-top: 4rem !important;
+  line-height: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 2rem !important;
+  border-bottom: none !important;
+}
+
+#blogContent h3 {
+  font-size: 1.5rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+#blogContent hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  #blogContent h1 {
+    font-size: 2rem !important;
+  }
+  #blogContent h2 {
+    font-size: 1.5rem !important;
+  }
+  #blogContent h3 {
+    font-size: 1.25rem !important;
+  }
+  #blogContent p {
+    font-size: 1rem !important;
+  }
+  #blogContent blockquote {
+    padding: 10px !important;
+  }
+  #blogContent li::before {
+    font-weight: 450 !important;
+    color: rgb(0, 0, 0) !important;
+  }
+  #blogContent li,
+  #blogContent p {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 400 !important;
+    line-height: 1.5rem !important;
+  }
+
+  #blogContent li,
+  #blogContent p {
+    font-size: 1rem !important;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}

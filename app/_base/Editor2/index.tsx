@@ -20,25 +20,12 @@ interface WysiwygEditorType {
   editorRef: RefObject<Editor>;
 }
 
-const WysiwygEditor = ({ initialValue = "", editorRef }: WysiwygEditorType) => {
-  const [content, setContent] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (initialValue) {
-      setContent(initialValue);
-    }
-  }, [initialValue]);
-
-  if (content === null) {
-    // 데이터 로드 전 로딩 메시지 표시
-    return <div>Loading...</div>;
-  }
+const WysiwygEditor = ({ editorRef }: WysiwygEditorType) => {
 
   // 조건에 따라 props를 설정
   const editorProps = {
     name: "content",
     ref: editorRef,
-    initialValue: content, // 글 수정 시 사용
     initialEditType: "markdown", // wysiwyg & markdown
     previewStyle: "vertical",
     height: "calc(100vh - 100px)",
