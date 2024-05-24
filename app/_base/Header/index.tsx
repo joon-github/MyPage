@@ -5,9 +5,23 @@ import { useSetRecoilState } from "recoil";
 import { isManagerState } from "@/app/store/globalState";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
-
+import { usePathname,useRouter} from "next/navigation";
 const Header = ({ pw }: { pw: string | undefined }) => {
   const setIsManagerState = useSetRecoilState(isManagerState);
+  const pathname = usePathname();
+  const router = useRouter();
+  // admin-check페이지 일떄 useEffect 실행
+  useEffect(() => {
+    if (pathname === "/admin-check") {
+      const input = prompt("비밀번호를 입력해주세요.");
+      if (input === pw) {
+        localStorage.setItem("AUTHENTICATION_PASSWORD", input);
+        router.push("/blog");
+      } else {
+        alert("비밀번호가 일치하지 않습니다.");
+      }
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (pw === localStorage.getItem("AUTHENTICATION_PASSWORD")) {
