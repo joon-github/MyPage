@@ -65,19 +65,20 @@ const page = () => {
     <div className="mt-[80px]">
       <form action={onSubmit} className={styles.form}>
         <div className={styles.inputs}>
-          <div>
+          <div className={styles.inputWapper} style={{flex:1}}>
             <label>제목 : </label>
-            <input defaultValue={data?.title} type="text" name="title" />
+            <input style={{ width: "100%" }} defaultValue={data?.title} type="text" name="title" />
           </div>
-          <div>
+          <div className={styles.inputWapper}>
             <label>설명 : </label>
             <input
+              style={{ width: "100%" }}
               defaultValue={data?.sub_title}
               type="text"
               name="sub_title"
             />
           </div>
-          <div>
+          <div className={styles.inputWapper}>
             <select name="tag_id">
               {categorys?.map((data: CategoryType) => {
                 return (
