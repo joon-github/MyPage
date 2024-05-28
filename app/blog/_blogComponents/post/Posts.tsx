@@ -15,7 +15,7 @@ export type PostType = {
 
 const fetchPosts = async () => {
   const postsData = await fetch(`${baseUrl}/api/blog/post`, {
-    cache: "no-store",
+    cache: "force-cache",
   });
   const { rows: posts } = await postsData.json();
   const newData: any = {};
